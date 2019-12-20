@@ -15,6 +15,8 @@ class RingBuffer:
         # self.current = item
         # keep adding to tail until max capacity
         # if max capacity, replace head with item
+        print('capacity:', self.capacity)
+        print('length:', self.storage.__len__())
 
         if self.storage.__len__() > self.capacity:
             print('max capacity')

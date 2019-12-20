@@ -19,6 +19,7 @@ f.close()
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
+
 # ----  Refactored solution ----
 # Runtime: 0.19 seconds
 # Big O: O(n) * O(log n) = O(n log n)
@@ -41,6 +42,7 @@ for name_2 in names_2:  # O(log n)
     if bst.contains(name_2):
         duplicates.append(name_2)
 
+
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
@@ -49,3 +51,7 @@ print(f"runtime: {end_time - start_time} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish with no restrictions on techniques or data
 # structures?
+
+# 0.0099 seconds
+
+fast_duplicates = set(names_1+names_2)
